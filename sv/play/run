@@ -1,0 +1,8 @@
+#!/bin/sh
+
+#sv start socklog-unix || exit 1
+cd /app
+rm RUNNING_PID
+
+exec 2>&1
+exec /play/play start 
