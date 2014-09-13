@@ -24,11 +24,11 @@ RUN add-apt-repository ppa:webupd8team/java -y && \
     apt-get install -y oracle-java7-installer
 ENV JAVA_HOME /usr/lib/jvm/java-7-oracle
 
-#Play
-RUN wget http://downloads.typesafe.com/play/2.2.3/play-2.2.3.zip && \
-    unzip play*.zip && \
-    rm play*.zip
-RUN mv play* play
+#Activator
+RUN wget http://downloads.typesafe.com/typesafe-activator/1.2.10/typesafe-activator-1.2.10.zip && \
+    unzip typesafe-activator*.zip && \
+    rm typesafe-activator*.zip
+RUN mv activator* activator
 
 #Add runit services
 ADD sv /etc/service 

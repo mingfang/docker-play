@@ -2,7 +2,7 @@
 
 #sv start socklog-unix || exit 1
 cd /app
-rm RUNNING_PID
+rm target/universal/stage/RUNNING_PID
 
 exec 2>&1
-exec /play/play start 
+exec /activator/activator start 
